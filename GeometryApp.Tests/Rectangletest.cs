@@ -1,10 +1,10 @@
  using GeometryShapes;
 
 [TestClass]
-public class RectangleTests
+public class Rectangletest
 {
     [TestMethod]
-    public void TestAreaWithPositiveWidthAndLength()
+    public void Test_Area_With_Positive_Width_And_Length()
     {
         var rectangle = new Rectangle(5, 10);
 
@@ -14,7 +14,7 @@ public class RectangleTests
     }
 
     [TestMethod]
-    public void TestPerimeterWithPositiveWidthAndLength()
+    public void Test_Perimeter_With_Positive_Width_And_Length()
     {
         var rectangle = new Rectangle(5, 10);
 
@@ -24,7 +24,7 @@ public class RectangleTests
     }
 
     [TestMethod]
-    public void TestAreaWithZeroWidthAndPositiveLength()
+    public void Test_Area_With_Zero_Width_And_Positive_Length()
     {
         var rectangle = new Rectangle(0, 10);
 
@@ -34,7 +34,7 @@ public class RectangleTests
     }
 
     [TestMethod]
-    public void TestPerimeterWithZeroWidthAndPositiveLength()
+    public void Test_Perimeter_With_Zero_Width_And_Positive_Length()
     {
         var rectangle = new Rectangle(0, 10);
 
@@ -44,7 +44,7 @@ public class RectangleTests
     }
 
     [TestMethod]
-    public void TestAreaWithPositiveWidthAndZeroLength()
+    public void Test_Area_With_Positive_Width_And_Zero_Length()
     {
         var rectangle = new Rectangle(5, 0);
 
@@ -54,7 +54,7 @@ public class RectangleTests
     }
 
     [TestMethod]
-    public void TestPerimeterWithPositiveWidthAndZeroLength()
+    public void Test_Perimeter_With_Positive_Width_And_Zero_Length()
     {
         var rectangle = new Rectangle(5, 0);
 

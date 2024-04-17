@@ -1,9 +1,10 @@
 using GeometryShapes;
+
 [TestClass]
-public class SquareTests
+public class Squaretest
 {
     [TestMethod]
-    public void TestArea()
+    public void Test_Squares_Area_for_Valid_Side_Length()
     {
         var square = new Square(5);
 
@@ -13,7 +14,7 @@ public class SquareTests
     }
 
     [TestMethod]
-    public void TestPerimeter()
+    public void Test_Squares_Perimeter_for_Valid_Side_Length()
     {
         var square = new Square(5);
 
@@ -23,7 +24,7 @@ public class SquareTests
     }
 
     [TestMethod]
-    public void TestAreaWithNegativeSideLength()
+    public void Test_Area_With_Negative_Side_Length()
     {
         var square = new Square(-5);
 
@@ -33,7 +34,7 @@ public class SquareTests
     }
 
     [TestMethod]
-    public void TestPerimeterWithNegativeSideLength()
+    public void Test_Perimeter_With_Negative_Side_Length()
     {
         var square = new Square(-5);
 
@@ -43,19 +44,17 @@ public class SquareTests
     }
 
     [TestMethod]
-    public void TestPerimeterWithZeroSideLength()
+    public void Test_Perimeter_With_Zero_Side_Length()
     {
-        // Arrange
         var square = new Square(0);
 
-        // Act
         var result = square.CalculatePerimeter();
 
-        // Assert
         Assert.AreEqual(0, result);
     }
+
     [TestMethod]
-    public void TestAreaWithZeroSideLength()
+    public void Test_Area_With_Zero_Side_Length()
     {
         var square = new Square(0);
 

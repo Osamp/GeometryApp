@@ -15,9 +15,9 @@ var featureManager = serviceProvider.GetRequiredService<IFeatureManagerSnapshot>
 
 if (await featureManager.IsEnabledAsync("Square"))
 {
-    // Provide access to Square
+
     Console.Write("Enter the side length of the square: ");
-    string input = Console.ReadLine();
+    string input = Console.ReadLine() ?? string.Empty;
     if (double.TryParse(input, out double sideLength))
     {
         var square = new Square(sideLength);
@@ -29,15 +29,16 @@ if (await featureManager.IsEnabledAsync("Square"))
     }
 }
 
+
 if (await featureManager.IsEnabledAsync("Rectangle"))
 {
-    // Provide access to Rectangle
+
     Console.Write("Enter the length of the rectangle: ");
-    string input = Console.ReadLine();
+    string input = Console.ReadLine() ?? string.Empty;
     if (double.TryParse(input, out double length))
     {
         Console.Write("Enter the width of the rectangle: ");
-        input = Console.ReadLine();
+        input = Console.ReadLine() ?? string.Empty;
         if (double.TryParse(input, out double width))
         {
             var rectangle = new Rectangle(length, width);
@@ -54,17 +55,18 @@ if (await featureManager.IsEnabledAsync("Rectangle"))
     }
 }
 
+
 if (await featureManager.IsEnabledAsync("Triangle"))
 {
-    // Provide access to Rectangle
+
     Console.Write("Enter the base length of the triangle: ");
-    string baseInput = Console.ReadLine();
+    string baseInput = Console.ReadLine() ?? string.Empty;
     Console.Write("Enter the height of the triangle: ");
-    string heightInput = Console.ReadLine();
+    string heightInput = Console.ReadLine() ?? string.Empty;
     Console.Write("Enter the length of side A of the triangle: ");
-    string sideAInput = Console.ReadLine();
+    string sideAInput = Console.ReadLine() ?? string.Empty;
     Console.Write("Enter the length of side B of the triangle: ");
-    string sideBInput = Console.ReadLine();
+    string sideBInput = Console.ReadLine() ?? string.Empty;
 
     if (double.TryParse(baseInput, out double baseLength) &&
         double.TryParse(heightInput, out double height) &&
